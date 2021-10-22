@@ -1,7 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Asset.Slabe2'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('a1') {
       steps {
         sh '''if [ ! -e ./Assets ]; then
 	echo "start clone sekai_client"
